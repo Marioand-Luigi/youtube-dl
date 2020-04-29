@@ -442,7 +442,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             webpage, 'language', default=None, group='lang')
 
         video_title = self._html_search_regex(
-            r'(?s)<h1[^>]*>((?:(?!<h1).)*?<span[^>]+itemprop=["\']title["\'][^>]*>(?:(?!<h1).)+?)</h1>',
+            r'(?s)<h1[^>]*>((?:(?!<h1).)*?<span[^>]+itemprop=[\"\']name[\"\'][^>]*>(?:(?!<h1).)+?)</h1>',
             webpage, 'video_title')
         video_title = re.sub(r' {2,}', ' ', video_title)
         video_description = (self._parse_json(self._html_search_regex(
